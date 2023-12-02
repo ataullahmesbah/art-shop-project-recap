@@ -10,7 +10,8 @@ const Navbar = () => {
                 <div className="hidden lg:flex space-x-4">
                     <a href="#" className="text-white">Home</a>
                     <a href="#" className="text-white">Shop</a>
-                    <a href="#" className="text-white">Books</a>
+                    <a href="#" className="text-white">Projects</a>
+                    <a href="#" className="text-white">Services & Parts</a>
                     <a href="#" className="text-white">Dashboard</a>
                 </div>
                 <div className="lg:hidden">

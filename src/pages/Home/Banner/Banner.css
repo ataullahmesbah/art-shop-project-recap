@@ -1,0 +1,35 @@
+.fade-enter {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  
+  .fade-enter-active {
+    opacity: 1;
+    transform: translateX(0%);
+    transition: opacity 1s, transform 1s;
+  }
+  
+  .fade-exit {
+    opacity: 1;
+  }
+  
+  .fade-exit-active {
+    opacity: 0;
+    transition: opacity 1s;
+  }
+  
+  .btn {
+    background-color: #ffffff;
+    color: #001f37;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .btn:hover {
+    background-color: #001f37;
+    color: #ffffff;
+  }
+  
