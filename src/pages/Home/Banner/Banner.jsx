@@ -2,6 +2,9 @@ import { useState, useEffect } from 'react';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
 import './Banner.css';
 
+import { FaLongArrowAltRight } from "react-icons/fa";
+import { Link } from 'react-router-dom';
+
 const slides = [
     {
         image: 'https://i.ibb.co/6YjnK4S/EEE.jpg',
@@ -32,7 +35,7 @@ const Banner = () => {
 
     useEffect(() => {
         const interval = setInterval(() => {
-            setCurrentSlide((prev) => (prev + 5) % slides.length);
+            setCurrentSlide((prev) => (prev + 1) % slides.length);
         }, 5000); // Change slide every 5 seconds
 
         return () => clearInterval(interval);
@@ -43,7 +46,8 @@ const Banner = () => {
     };
 
     return (
-        <div className="relative h-screen w-full overflow-hidden sm:w-full md:w-full lg:w-full xl:w-full">
+        <div className="relative h-screen w-full overflow-hidden sm:w-full md:w-full lg:w-full xl:w-full mb-8">
+
             <div
                 className="h-3/4 relative overflow-hidden"
                 style={{
@@ -62,11 +66,11 @@ const Banner = () => {
                                 backgroundPosition: 'center',
                             }}
                         >
-                            <div className="absolute left-0 lg:mx-28 px-2 text-white text-left">
-                                <h1 className="lg:text-4xl md:text-4xl text-3xl lg:w-1/2 font-bold mb-4">
+                            <div className="absolute left-0 lg:mx-28 p-2 text-white text-left">
+                                <h1 className="lg:text-4xl md:text-4xl text-xl lg:w-1/2 font-bold mb-4">
                                     {slides[currentSlide].title}
                                 </h1>
-                                <p className="text-lg lg:w-1/2 mb-6">
+                                <p className="lg:text-lg lg:w-1/2 mb-6">
                                     {slides[currentSlide].description}
                                 </p>
                                 <div className="space-x-4">
@@ -82,6 +86,23 @@ const Banner = () => {
                     </CSSTransition>
                 </TransitionGroup>
             </div>
+
+            {/* this is other down start */}
+
+            <div className="h-1/4 font-poppins justify-center  text-center">
+                <div className="lg:m-10 p-2 space-y-4">
+                    <h1 className="lg:text-4xl font-poppins font-bold">The formula for better engineering</h1>
+                    <p className="">Over 22,000 engineers in Bangladesh have the formula for better engineering. Learn how they apply <br /> the formula, and join Engineering Bangladesh so you too can be the best engineer you can be.</p>
+
+                    <Link to='/' className="flex gap-3 items-center text-center justify-center text-blue-700 hover:text-blue-900">
+                        <p>Get the Formula</p>
+                        <FaLongArrowAltRight className="text-xl" />
+
+                    </Link>
+                </div>
+            </div>
+
+
         </div>
     );
 };

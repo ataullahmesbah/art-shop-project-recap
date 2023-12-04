@@ -2,7 +2,7 @@ import { FaUser } from "react-icons/fa";
 
 const Navbar = () => {
     return (
-        <nav className="bg-gray-500 p-5 h-20 ">
+        <nav className="bg-gray-500 p-3  ">
             <div className="container mx-auto flex items-center justify-between">
                 <div className="text-white font-bold text-lg">
                     Art Shop
